@@ -1,0 +1,16 @@
+# Minimal local Supabase config for `supabase start` / `supabase test db`.
+project_id = "velora"
+
+[db]
+major_version = 15
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[auth]
+site_url = "velora://"
+additional_redirect_urls = ["velora://reset-password", "http://localhost:8081/reset-password"]
+
+[auth.email]
+enable_confirmations = false

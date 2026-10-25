@@ -1,0 +1,221 @@
+{
+  "_note": "DEVELOPMENT SAMPLE DATA. Hotels, prices, ratings, review counts and inventory are illustrative — not live availability or current market prices. Used by the on-device demo backend and by scripts/generate-seed-sql.mjs for supabase/seed.sql.",
+  "amenities": [
+    { "id": "pool", "label": "Pool", "icon": "waves" },
+    { "id": "wifi", "label": "Free Wi-Fi", "icon": "wifi" },
+    { "id": "spa", "label": "Spa", "icon": "flower" },
+    { "id": "dining", "label": "Dining", "icon": "utensils" },
+    { "id": "gym", "label": "Gym", "icon": "dumbbell" },
+    { "id": "private-pool", "label": "Private pool", "icon": "waves" },
+    { "id": "breakfast", "label": "Breakfast", "icon": "coffee" },
+    { "id": "airport-transfer", "label": "Airport transfer", "icon": "car" },
+    { "id": "beachfront", "label": "Beachfront", "icon": "umbrella" },
+    { "id": "family", "label": "Family friendly", "icon": "baby" }
+  ],
+  "destinations": [
+    {
+      "id": "bali", "name": "Bali", "country": "Indonesia", "photo": "dest-bali",
+      "blurb": "Island of temples, cliffside villas and rice terraces. Best from April to October.",
+      "areas": ["Uluwatu", "Ubud", "Seminyak", "Sidemen"], "lat": -8.5, "lng": 115.2
+    },
+    {
+      "id": "maldives", "name": "Maldives", "country": "Maldives", "photo": "dest-maldives",
+      "blurb": "Overwater villas on quiet atolls, house reefs and long, slow days. Best from November to April.",
+      "areas": ["Noonu Atoll", "Baa Atoll"], "lat": -5.5, "lng": 73.2
+    },
+    {
+      "id": "santorini", "name": "Santorini", "country": "Greece", "photo": "dest-santorini",
+      "blurb": "Whitewashed villages on the caldera rim, famous sunsets and volcanic beaches. Best from May to October.",
+      "areas": ["Oia", "Imerovigli"], "lat": 36.42, "lng": 25.4
+    },
+    {
+      "id": "rome", "name": "Rome", "country": "Italy", "photo": "dest-rome",
+      "blurb": "Ancient ruins, piazzas and trattorias within walking distance. Best in spring and autumn.",
+      "areas": ["Centro Storico", "Trastevere"], "lat": 41.9, "lng": 12.48
+    },
+    {
+      "id": "phuket", "name": "Phuket", "country": "Thailand", "photo": "hotel-lagoon-bay",
+      "blurb": "Andaman beaches, island hopping and lively night markets. Best from November to April.",
+      "areas": ["Kamala", "Kata"], "lat": 7.88, "lng": 98.3
+    }
+  ],
+  "hotels": [
+    {
+      "id": "grand-horizon", "destinationId": "bali", "name": "Grand Horizon Villa & Spa", "area": "Uluwatu",
+      "address": "Jl. Pantai Suluban, Uluwatu", "locationNote": "25 min to Ngurah Rai Airport · 10 min to Uluwatu Temple",
+      "description": "A cliff-top retreat above the Indian Ocean with private pool villas, a sunset spa and an open-air restaurant — 10 minutes from Uluwatu Temple.",
+      "propertyType": "villa", "rating": 4.8, "reviewCount": 932,
+      "photos": ["hotel-grand-horizon", "room-cliff-suite", "room-family-villa", "room-deluxe-king", "room-ocean-view-pool-villa"],
+      "amenityIds": ["pool", "wifi", "spa", "dining", "gym", "private-pool", "breakfast", "airport-transfer"],
+      "highlights": ["Private pool", "Ocean view"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 2500, "taxRateBps": 1000, "lat": -8.8291, "lng": 115.0849,
+      "rooms": [
+        { "id": "gh-ocean-villa", "name": "Ocean View Pool Villa", "category": "villa", "photo": "room-ocean-view-pool-villa", "sizeM2": 85, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 57900, "freeCancelDays": 2, "breakfastIncluded": true, "features": ["Private pool", "Breakfast", "Ocean view"], "inventory": 4, "badge": "Best value" },
+        { "id": "gh-cliff-suite", "name": "Cliff Suite", "category": "suite", "photo": "room-cliff-suite", "sizeM2": 62, "bed": "1 King Bed", "maxGuests": 2, "pricePerNightCents": 44900, "freeCancelDays": 2, "breakfastIncluded": true, "features": ["Bathtub", "Breakfast"], "inventory": 6 },
+        { "id": "gh-family-villa", "name": "Two-Bedroom Family Villa", "category": "villa", "photo": "room-family-villa", "sizeM2": 140, "bed": "2 King Beds", "maxGuests": 5, "pricePerNightCents": 89000, "freeCancelDays": null, "breakfastIncluded": false, "features": ["Private pool", "Kitchen"], "inventory": 2 }
+      ]
+    },
+    {
+      "id": "azure-lagoon", "destinationId": "maldives", "name": "The Azure Lagoon Resort", "area": "Noonu Atoll",
+      "address": "Manathu Island, Noonu Atoll", "locationNote": "45 min seaplane from Velana Airport · House reef at the villa steps",
+      "description": "Overwater villas strung along a turquoise lagoon, with glass-floor living rooms, a house reef for snorkelling and dinner on a sandbank.",
+      "propertyType": "resort", "rating": 4.9, "reviewCount": 1204,
+      "photos": ["hotel-azure-lagoon", "dest-maldives", "room-deluxe-king"],
+      "amenityIds": ["pool", "wifi", "spa", "dining", "private-pool", "breakfast", "airport-transfer", "beachfront"],
+      "highlights": ["Overwater villa", "Breakfast"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 4000, "taxRateBps": 1600, "lat": -5.85, "lng": 73.35,
+      "rooms": [
+        { "id": "al-overwater", "name": "Overwater Pool Villa", "category": "villa", "photo": "dest-maldives", "sizeM2": 120, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 65000, "freeCancelDays": 7, "breakfastIncluded": true, "features": ["Private pool", "Breakfast", "Lagoon access"], "inventory": 6, "badge": "Most booked" },
+        { "id": "al-beach", "name": "Beach Villa", "category": "villa", "photo": "room-deluxe-king", "sizeM2": 90, "bed": "1 King Bed", "maxGuests": 2, "pricePerNightCents": 48000, "freeCancelDays": 7, "breakfastIncluded": true, "features": ["Beachfront", "Breakfast"], "inventory": 8 }
+      ]
+    },
+    {
+      "id": "caldera-cliff", "destinationId": "santorini", "name": "Caldera Cliff Suites", "area": "Oia",
+      "address": "Nomikos Street, Oia", "locationNote": "5 min walk to Oia Castle · 30 min to Santorini Airport",
+      "description": "Cave suites carved into the caldera wall, each with a terrace and plunge pool facing the sunset over the volcano.",
+      "propertyType": "hotel", "rating": 4.9, "reviewCount": 688,
+      "photos": ["hotel-caldera-cliff", "dest-santorini", "room-modern-queen"],
+      "amenityIds": ["wifi", "breakfast", "private-pool", "airport-transfer"],
+      "highlights": ["Caldera view", "Plunge pool"], "checkInTime": "15:00", "checkOutTime": "11:00",
+      "resortFeePerNightCents": 0, "taxRateBps": 1300, "lat": 36.4618, "lng": 25.3753,
+      "rooms": [
+        { "id": "cc-cave-suite", "name": "Cave Suite with Plunge Pool", "category": "suite", "photo": "hotel-caldera-cliff", "sizeM2": 48, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 72000, "freeCancelDays": 14, "breakfastIncluded": true, "features": ["Plunge pool", "Breakfast", "Caldera view"], "inventory": 5 },
+        { "id": "cc-caldera-room", "name": "Caldera View Room", "category": "room", "photo": "room-modern-queen", "sizeM2": 28, "bed": "1 Queen Bed", "maxGuests": 2, "pricePerNightCents": 54000, "freeCancelDays": 14, "breakfastIncluded": true, "features": ["Caldera view", "Breakfast"], "inventory": 4 }
+      ]
+    },
+    {
+      "id": "palm-courtyard", "destinationId": "bali", "name": "Palm Courtyard Hotel", "area": "Seminyak",
+      "address": "Jl. Kayu Aya, Seminyak", "locationNote": "5 min walk to Seminyak Beach · 25 min to Ngurah Rai Airport",
+      "description": "A palm-lined courtyard hotel with a long reflecting pool, a short walk from Seminyak's beach clubs and boutiques.",
+      "propertyType": "hotel", "rating": 4.7, "reviewCount": 1876,
+      "photos": ["hotel-palm-courtyard", "room-deluxe-king", "room-modern-queen"],
+      "amenityIds": ["pool", "wifi", "dining", "gym", "breakfast", "family"],
+      "highlights": ["Breakfast", "Pool"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 0, "taxRateBps": 1000, "lat": -8.6913, "lng": 115.1682,
+      "rooms": [
+        { "id": "pc-garden", "name": "Garden Deluxe Room", "category": "room", "photo": "room-deluxe-king", "sizeM2": 36, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 31000, "freeCancelDays": 3, "breakfastIncluded": true, "features": ["Breakfast", "Garden view"], "inventory": 12 },
+        { "id": "pc-pool-access", "name": "Pool Access Room", "category": "room", "photo": "hotel-palm-courtyard", "sizeM2": 40, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 36000, "freeCancelDays": 3, "breakfastIncluded": true, "features": ["Pool access", "Breakfast"], "inventory": 6 }
+      ]
+    },
+    {
+      "id": "jungle-mist", "destinationId": "bali", "name": "Jungle Mist Retreat", "area": "Ubud",
+      "address": "Jl. Raya Sayan, Ubud", "locationNote": "15 min to Ubud Palace · Ayung River valley",
+      "description": "Pool villas on the edge of the Ayung River gorge, with yoga at sunrise and dinners made from the garden.",
+      "propertyType": "villa", "rating": 4.9, "reviewCount": 512,
+      "photos": ["hotel-jungle-mist", "room-ocean-view-pool-villa", "room-cliff-suite"],
+      "amenityIds": ["pool", "wifi", "spa", "dining", "private-pool", "breakfast"],
+      "highlights": ["Private pool", "Jungle view"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 1500, "taxRateBps": 1000, "lat": -8.5069, "lng": 115.2625,
+      "rooms": [
+        { "id": "jm-pool-villa", "name": "Jungle Pool Villa", "category": "villa", "photo": "hotel-jungle-mist", "sizeM2": 95, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 42000, "freeCancelDays": 5, "breakfastIncluded": true, "features": ["Private pool", "Breakfast"], "inventory": 5 },
+        { "id": "jm-treehouse", "name": "Treehouse Suite", "category": "suite", "photo": "room-cliff-suite", "sizeM2": 55, "bed": "1 King Bed", "maxGuests": 2, "pricePerNightCents": 38000, "freeCancelDays": 5, "breakfastIncluded": true, "features": ["Valley view", "Breakfast"], "inventory": 3 }
+      ]
+    },
+    {
+      "id": "lagoon-bay", "destinationId": "phuket", "name": "Lagoon Bay Resort", "area": "Kamala",
+      "address": "Kamala Beach Road, Kamala", "locationNote": "On Kamala Beach · 35 min to Phuket Airport",
+      "description": "A beachfront resort around a lagoon pool, with cabanas facing the Andaman Sea and a spa in the gardens.",
+      "propertyType": "resort", "rating": 4.6, "reviewCount": 954,
+      "photos": ["hotel-lagoon-bay", "room-modern-queen", "room-deluxe-king"],
+      "amenityIds": ["pool", "wifi", "spa", "dining", "gym", "breakfast", "beachfront", "family"],
+      "highlights": ["Beachfront", "Breakfast"], "checkInTime": "15:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 1000, "taxRateBps": 700, "lat": 7.9512, "lng": 98.2836,
+      "rooms": [
+        { "id": "lb-lagoon-suite", "name": "Lagoon Suite", "category": "suite", "photo": "hotel-lagoon-bay", "sizeM2": 60, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 38500, "freeCancelDays": 3, "breakfastIncluded": true, "features": ["Pool access", "Breakfast"], "inventory": 8 },
+        { "id": "lb-deluxe", "name": "Deluxe Room", "category": "room", "photo": "room-modern-queen", "sizeM2": 34, "bed": "1 Queen Bed", "maxGuests": 2, "pricePerNightCents": 26000, "freeCancelDays": 3, "breakfastIncluded": false, "features": ["Garden view"], "inventory": 14 }
+      ]
+    },
+    {
+      "id": "sidemen-valley", "destinationId": "bali", "name": "Sidemen Valley Lodge", "area": "Sidemen",
+      "address": "Jl. Raya Sidemen, Karangasem", "locationNote": "Rice-terrace valley · 1 h 45 min to Ngurah Rai Airport",
+      "description": "A small lodge among rice terraces facing Mount Agung, with an infinity pool and cooking classes.",
+      "propertyType": "hotel", "rating": 4.6, "reviewCount": 214,
+      "photos": ["hotel-sidemen-valley", "room-deluxe-king"],
+      "amenityIds": ["pool", "wifi", "dining", "breakfast"],
+      "highlights": ["Mountain view", "Breakfast"], "checkInTime": "14:00", "checkOutTime": "11:00",
+      "resortFeePerNightCents": 0, "taxRateBps": 1000, "lat": -8.4728, "lng": 115.4417,
+      "rooms": [
+        { "id": "sv-valley-room", "name": "Valley View Room", "category": "room", "photo": "room-deluxe-king", "sizeM2": 32, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 24000, "freeCancelDays": 2, "breakfastIncluded": true, "features": ["Valley view", "Breakfast"], "inventory": 6 }
+      ]
+    },
+    {
+      "id": "coral-reef", "destinationId": "maldives", "name": "Coral Reef Island Villas", "area": "Baa Atoll",
+      "address": "Dhunikolhu Island, Baa Atoll", "locationNote": "35 min seaplane from Velana Airport · UNESCO biosphere reserve",
+      "description": "Beach villas with decks over the sand, a dive centre on the house reef and a quiet adults' pool.",
+      "propertyType": "resort", "rating": 4.8, "reviewCount": 402,
+      "photos": ["hotel-coral-reef", "room-ocean-view-pool-villa"],
+      "amenityIds": ["pool", "wifi", "spa", "dining", "breakfast", "beachfront", "private-pool"],
+      "highlights": ["Beachfront", "Private pool"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 3500, "taxRateBps": 1600, "lat": -5.17, "lng": 73.03,
+      "rooms": [
+        { "id": "cr-beach-pool-villa", "name": "Beach Pool Villa", "category": "villa", "photo": "room-ocean-view-pool-villa", "sizeM2": 110, "bed": "1 King Bed", "maxGuests": 4, "pricePerNightCents": 89000, "freeCancelDays": 10, "breakfastIncluded": true, "features": ["Private pool", "Beachfront", "Breakfast"], "inventory": 4 }
+      ]
+    },
+    {
+      "id": "imerovigli-sky", "destinationId": "santorini", "name": "Imerovigli Sky Houses", "area": "Imerovigli",
+      "address": "Main Path, Imerovigli", "locationNote": "On the caldera path · 20 min walk to Fira",
+      "description": "Restored captains' houses with kitchenettes and shared terraces — the quieter side of the caldera, with Oia's sunset in view.",
+      "propertyType": "apartment", "rating": 4.7, "reviewCount": 356,
+      "photos": ["onboarding-oia", "room-modern-queen"],
+      "amenityIds": ["wifi", "family"],
+      "highlights": ["Caldera view", "Kitchenette"], "checkInTime": "15:00", "checkOutTime": "11:00",
+      "resortFeePerNightCents": 0, "taxRateBps": 1300, "lat": 36.4325, "lng": 25.4232,
+      "rooms": [
+        { "id": "is-sky-studio", "name": "Sky Studio", "category": "room", "photo": "room-modern-queen", "sizeM2": 35, "bed": "1 Queen Bed + sofa bed", "maxGuests": 3, "pricePerNightCents": 41000, "freeCancelDays": 7, "breakfastIncluded": false, "features": ["Kitchenette", "Caldera view"], "inventory": 4 }
+      ]
+    },
+    {
+      "id": "kata-palm", "destinationId": "phuket", "name": "Kata Palm Hotel", "area": "Kata",
+      "address": "Kata Road, Karon", "locationNote": "3 min walk to Kata Beach · 50 min to Phuket Airport",
+      "description": "A whitewashed hotel around a palm-shaded pool, a short stroll from Kata's surf beach and night market.",
+      "propertyType": "hotel", "rating": 4.5, "reviewCount": 1320,
+      "photos": ["hotel-kata-palm", "room-deluxe-king"],
+      "amenityIds": ["pool", "wifi", "dining", "gym", "family"],
+      "highlights": ["Pool", "Near beach"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 0, "taxRateBps": 700, "lat": 7.8201, "lng": 98.2985,
+      "rooms": [
+        { "id": "kp-palm-room", "name": "Palm Room", "category": "room", "photo": "room-deluxe-king", "sizeM2": 30, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 21000, "freeCancelDays": 1, "breakfastIncluded": false, "features": ["Pool view"], "inventory": 16 }
+      ]
+    },
+    {
+      "id": "palazzo-aurelia", "destinationId": "rome", "name": "Palazzo Aurelia", "area": "Centro Storico",
+      "address": "Via dei Coronari, Rome", "locationNote": "4 min walk to Piazza Navona · 10 min to the Pantheon",
+      "description": "A 17th-century palazzo with frescoed ceilings, a rooftop terrace over the domes and classic rooms on a quiet lane.",
+      "propertyType": "hotel", "rating": 4.7, "reviewCount": 1508,
+      "photos": ["hotel-palazzo-aurelia", "dest-rome", "room-modern-queen"],
+      "amenityIds": ["wifi", "dining", "breakfast", "airport-transfer"],
+      "highlights": ["Historic centre", "Rooftop"], "checkInTime": "14:00", "checkOutTime": "11:00",
+      "resortFeePerNightCents": 700, "taxRateBps": 1000, "lat": 41.8995, "lng": 12.4708,
+      "rooms": [
+        { "id": "pa-classic", "name": "Classic Double", "category": "room", "photo": "hotel-palazzo-aurelia", "sizeM2": 22, "bed": "1 Queen Bed", "maxGuests": 2, "pricePerNightCents": 46000, "freeCancelDays": 2, "breakfastIncluded": true, "features": ["Breakfast", "Historic building"], "inventory": 8 },
+        { "id": "pa-junior-suite", "name": "Junior Suite", "category": "suite", "photo": "room-modern-queen", "sizeM2": 38, "bed": "1 King Bed + sofa bed", "maxGuests": 3, "pricePerNightCents": 62000, "freeCancelDays": 2, "breakfastIncluded": true, "features": ["Breakfast", "Rooftop access"], "inventory": 3 }
+      ]
+    },
+    {
+      "id": "teak-house", "destinationId": "bali", "name": "Teak House Beach Club", "area": "Seminyak",
+      "address": "Jl. Petitenget, Seminyak", "locationNote": "On Petitenget Beach · 30 min to Ngurah Rai Airport",
+      "description": "Teak-roofed bungalows around a sundeck pool, steps from the sand and Seminyak's sunset bars.",
+      "propertyType": "resort", "rating": 4.5, "reviewCount": 768,
+      "photos": ["hotel-teak-deck", "room-deluxe-king"],
+      "amenityIds": ["pool", "wifi", "dining", "beachfront", "breakfast"],
+      "highlights": ["Beachfront", "Breakfast"], "checkInTime": "14:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 1000, "taxRateBps": 1000, "lat": -8.6782, "lng": 115.1513,
+      "rooms": [
+        { "id": "th-bungalow", "name": "Teak Bungalow", "category": "room", "photo": "hotel-teak-deck", "sizeM2": 42, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 27500, "freeCancelDays": 2, "breakfastIncluded": true, "features": ["Breakfast", "Near beach"], "inventory": 10 }
+      ]
+    },
+    {
+      "id": "andaman-reflection", "destinationId": "phuket", "name": "Andaman Reflection Resort", "area": "Kamala",
+      "address": "Kamala Hillside, Kamala", "locationNote": "Hillside above Kamala Bay · 35 min to Phuket Airport",
+      "description": "A modern resort built around a mirror-still infinity pool with views over Kamala Bay at dusk.",
+      "propertyType": "resort", "rating": 4.8, "reviewCount": 621,
+      "photos": ["hotel-reflection-pool", "room-modern-queen"],
+      "amenityIds": ["pool", "wifi", "spa", "dining", "gym", "breakfast", "airport-transfer"],
+      "highlights": ["Infinity pool", "Sea view"], "checkInTime": "15:00", "checkOutTime": "12:00",
+      "resortFeePerNightCents": 1500, "taxRateBps": 700, "lat": 7.9583, "lng": 98.2861,
+      "rooms": [
+        { "id": "ar-sea-view", "name": "Sea View Suite", "category": "suite", "photo": "room-modern-queen", "sizeM2": 58, "bed": "1 King Bed", "maxGuests": 3, "pricePerNightCents": 47000, "freeCancelDays": 5, "breakfastIncluded": true, "features": ["Sea view", "Breakfast"], "inventory": 6 }
+      ]
+    }
+  ]
+}
